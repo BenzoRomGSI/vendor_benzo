@@ -51,3 +51,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/benzo/overlay/common
 
 # Inherit common product build prop overrides
 -include vendor/benzo/config/common_versions.mk
+
+# include definitions for SDCLANG
+include vendor/benzo/sdclang/sdclang.mk
+
