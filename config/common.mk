@@ -19,9 +19,16 @@ PRODUCT_COPY_FILES += \
     vendor/benzo/prebuilt/lib64/libjni_latinimegoogle.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libjni_latinimegoogle.so
 
 # Backup Tool
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/benzo/prebuilt/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/benzo/prebuilt/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/benzo/prebuilt/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+else
 PRODUCT_COPY_FILES += \
     vendor/benzo/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/benzo/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions
+endif
 
 # init.d support
 PRODUCT_COPY_FILES += \
