@@ -15,16 +15,9 @@ BENZO_VERSION := $(ROM_VERSION)
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.benzo.version=$(ROM_VERSION)
 
-# Get kernel GCC version
--include vendor/benzo/config/optimizations/sm.mk
-
-# DragonTC info
-DRAGONTC_VERSION := 6.0
-
-DTC_PATH := prebuilts/clang/host/linux-x86/$(DRAGONTC_VERSION)
-DTC_VER := $(shell cat $(DTC_PATH)/VERSION)
+# Disable cfi sanitizer
+ENABLE_CFI := false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.clang.version=$(DTC_VER)
+    ro.clang.version=Snapdragon-LLVM-4.0.2
 
--include prebuilts/clang/host/linux-x86/$(DRAGONTC_VERSION)/DragonTC.mk

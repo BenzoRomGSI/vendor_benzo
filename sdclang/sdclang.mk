@@ -13,9 +13,8 @@
 # limitations under the License.
 
 SDCLANG ?= true
-SDCLANG_FORCED ?= false
 
-SDCLANG_PATH := vendor/qcom/sdclang-4.0/linux-x86/bin
+SDCLANG_PATH := vendor/qcom/sdclang-4.0/bin
 
 SDCLANG_LTO_DEFS := vendor/benzo/sdclang/sdllvm-lto-defs.mk
 
