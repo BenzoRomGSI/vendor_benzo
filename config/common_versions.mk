@@ -18,13 +18,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Get kernel GCC version
 -include vendor/benzo/config/optimizations/sm.mk
 
+# Disable cfi sanitizer
+ENABLE_CFI := false
+
 # DragonTC info
 DRAGONTC_VERSION := 5.0
 
-#DTC_PATH := prebuilts/clang/host/linux-x86/$(DRAGONTC_VERSION)
-#DTC_VER := $(shell cat $(DTC_PATH)/VERSION)
+DTC_PATH := prebuilts/clang/host/linux-x86/$(DRAGONTC_VERSION)
+DTC_VER := $(shell cat $(DTC_PATH)/VERSION)
 
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    ro.dtc.version=$(DTC_VER)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.clang.version=$(DTC_VER)
 
 -include prebuilts/clang/host/linux-x86/$(DRAGONTC_VERSION)/DragonTC.mk
