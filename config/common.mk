@@ -7,6 +7,16 @@
 include vendor/benzo/config/optimizations/optimizations.mk
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/benzo/overlay/common
+
+# Extra packages
+PRODUCT_PACKAGES += \
+    Terminal
+
+# Keyboard libs
+PRODUCT_COPY_FILES += \
+    vendor/benzo/prebuilt/lib64/libjni_latinimegoogle.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libjni_latinimegoogle.so
+
+# ART changes
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD = false
 
 # Inherit common product build prop overrides
