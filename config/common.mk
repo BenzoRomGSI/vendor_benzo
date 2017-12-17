@@ -16,6 +16,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/benzo/prebuilt/lib64/libjni_latinimegoogle.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libjni_latinimegoogle.so
 
+# Props
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
+# SystemUITests
+EXCLUDE_SYSTEMUI_TESTS := true
+
 # ART changes
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD = false
 
