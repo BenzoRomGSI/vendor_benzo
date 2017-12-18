@@ -22,7 +22,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ENABLE_CFI := false
 
 # DragonTC info
-DRAGONTC_VERSION := 5.0
+DRAGONTC_VERSION := 6.0
 
 DTC_PATH := prebuilts/clang/host/linux-x86/$(DRAGONTC_VERSION)
 DTC_VER := $(shell cat $(DTC_PATH)/VERSION)
