@@ -18,9 +18,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Get kernel GCC version
 -include vendor/benzo/config/optimizations/sm.mk
 
-# Disable cfi sanitizer
-ENABLE_CFI := false
-
 # DragonTC info
 DRAGONTC_VERSION := 6.0
 
