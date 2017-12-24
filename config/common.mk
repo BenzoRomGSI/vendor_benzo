@@ -20,6 +20,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
+# Substratum AOPT
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.substratum.aopt=true
+
 # SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
 
