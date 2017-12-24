@@ -10,6 +10,8 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/benzo/overlay/common
 
 # Extra packages
 PRODUCT_PACKAGES += \
+    OmniJaws \
+    OmniStyle \
     Terminal
 
 # Keyboard libs
