@@ -18,6 +18,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/benzo/prebuilt/lib64/libjni_latinimegoogle.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libjni_latinimegoogle.so
 
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/benzo/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/benzo/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions
+
+# init.d support
+PRODUCT_COPY_FILES += \
+    vendor/benzo/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/benzo/prebuilt/bin/sysinit:system/bin/sysinit
+
+# userinit support
+PRODUCT_COPY_FILES += \
+    vendor/benzo/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
+
 # Props
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
