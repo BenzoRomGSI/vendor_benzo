@@ -46,5 +46,8 @@ EXCLUDE_SYSTEMUI_TESTS := true
 # ART changes
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD = false
 
+# Overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/benzo/overlay/common
+
 # Inherit common product build prop overrides
 -include vendor/benzo/config/common_versions.mk
