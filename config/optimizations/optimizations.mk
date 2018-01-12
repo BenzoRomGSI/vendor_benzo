@@ -1,8 +1,6 @@
 # System
 USE_CCACHE := true
 
-export TARGET_DEVICE := marlin
-
 # Toolchain and other
 TARGET_GCC_VERSION_KERNEL := 8.0
 

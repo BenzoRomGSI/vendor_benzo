@@ -15,3 +15,5 @@
 #
 add_lunch_combo benzo_marlin-userdebug
 add_lunch_combo benzo_marlin-user
+add_lunch_combo benzo_sailfish-userdebug
+add_lunch_combo benzo_sailfish-user
