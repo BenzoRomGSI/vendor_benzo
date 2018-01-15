@@ -10,6 +10,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/benzo/overlay/common
 
 # Extra packages
 PRODUCT_PACKAGES += \
+    libbfqio \
     OmniJaws \
     OmniStyle \
     Terminal
@@ -38,6 +39,10 @@ PRODUCT_COPY_FILES += \
 # userinit support
 PRODUCT_COPY_FILES += \
     vendor/benzo/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
+
+# Benzo init
+PRODUCT_COPY_FILES += \
+    vendor/benzo/prebuilt/etc/init.benzo.rc:root/init.benzo.rc
 
 # Props
 PRODUCT_PROPERTY_OVERRIDES += \
