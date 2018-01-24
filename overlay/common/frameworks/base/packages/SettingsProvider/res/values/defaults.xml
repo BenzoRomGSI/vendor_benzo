@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 -->
-<resources>  
+<resources>
     <!-- Google backup -->
     <string name="def_backup_transport">com.google.android.gms/.backup.BackupTransportService</string>
 </resources>
