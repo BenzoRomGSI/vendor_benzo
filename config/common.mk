@@ -1,10 +1,4 @@
-# Benzo Rom 
-# 
-# See config/optimizations/optimizations.mk to set build optimizations
-# See config/common_versions.mk to set build numbers and OTA info
-
-# Inherit build optimizations
-include vendor/benzo/config/optimizations/optimizations.mk
+# Inherit art options
 include vendor/benzo/config/art.mk
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/benzo/overlay/common
@@ -47,7 +41,9 @@ PRODUCT_COPY_FILES += \
 
 # Props
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
+    ro.build.selinux=1 \
+    debug.performance.tuning=1 \
+    keyguard.no_require_sim=true
 
 # Substratum AOPT
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -55,6 +51,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
+USE_CCACHE := true
 
 # Overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/benzo/overlay/common
