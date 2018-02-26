@@ -5,6 +5,7 @@
 
 # Inherit build optimizations
 include vendor/benzo/config/optimizations/optimizations.mk
+include vendor/benzo/config/art.mk
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/benzo/overlay/common
 
@@ -54,11 +55,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
-
-# ART changes
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed
-PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 
 # Overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/benzo/overlay/common
