@@ -1,6 +1,7 @@
 # Release name
 PRODUCT_RELEASE_NAME := Pixel
 export TARGET_DEVICE := sailfish
+export SKIP_ABI_CHECKS := true
 
 # Inherit some common stuff.
 $(call inherit-product, vendor/benzo/config/common_full_phone.mk)

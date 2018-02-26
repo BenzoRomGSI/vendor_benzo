@@ -1,6 +1,7 @@
 # Release name
 PRODUCT_RELEASE_NAME := PixelXL
 export TARGET_DEVICE := marlin
+export SKIP_ABI_CHECKS := true
 
 # Inherit some common stuff.
 $(call inherit-product, vendor/benzo/config/common_full_phone.mk)
