@@ -35,9 +35,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/benzo/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
 
-# Benzo init
-PRODUCT_COPY_FILES += \
-    vendor/benzo/prebuilt/etc/init.benzo.rc:root/init.benzo.rc
+# Copy all benzo init rc files
+$(foreach f,$(wildcard vendor/benzo/prebuilt/etc/init/*.rc),\
+	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
 # Props
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -1,5 +1,4 @@
 on init
-
     mkdir /dev/bfqio 0755 root system
     mount cgroup none /dev/bfqio bfqio
     chown root system /dev/bfqio/tasks
@@ -12,6 +11,7 @@ on init
     chmod 0664 /dev/bfqio/rt-display/tasks
     chmod 0220 /dev/bfqio/rt-display/cgroup.event_control
 
+on boot
     chown system system /sys/block/mmcblk0/queue/scheduler
     chmod 0664 /sys/block/mmcblk0/queue/scheduler
     restorecon /sys/block/mmcblk0/queue/scheduler
