@@ -5,6 +5,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/benzo/overlay/common
 
 # Extra packages
 PRODUCT_PACKAGES += \
+    Browser \
     libbfqio \
     OmniJaws \
     OmniStyle \
@@ -51,6 +52,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
+
+# Use ccache
 USE_CCACHE := true
 
 # Overlay
