@@ -1,6 +1,8 @@
 # Benzo Rom 
 #
 PRODUCT_PACKAGE_OVERLAYS += vendor/benzo/overlay/common
+# Inherit art options
+include vendor/benzo/config/art.mk
 
 # Keyboard libs
 PRODUCT_COPY_FILES += \
