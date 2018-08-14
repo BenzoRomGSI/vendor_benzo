@@ -17,11 +17,17 @@
 #define LOG_TAG "bfqio"
 
 #include <cutils/iosched_policy.h>
+
+#include <errno.h>
 #include <fcntl.h>
-#include <log/log.h>
 #include <pthread.h>
-#include <sys/stat.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
+
+#include <log/log.h>
+#include <sys/stat.h>
 
 static int __rtio_cgroup_supported = -1;
 static pthread_once_t __rtio_init_once = PTHREAD_ONCE_INIT;
