@@ -15,6 +15,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.prov_mobiledata=false \
     debug.performance.tuning=1 \
     keyguard.no_require_sim=true
+#DL Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    aaudio.dl_scheduler=true
 
 # Copy hiddenapi whitelist
 PRODUCT_COPY_FILES += \
@@ -31,7 +34,7 @@ PRODUCT_COPY_FILES += \
 # Use ccache
 USE_CCACHE := true
 # ThinLTO cache
-USE_THINLTO_CACHE=true
+USE_THINLTO_CACHE := true
 
 # SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
