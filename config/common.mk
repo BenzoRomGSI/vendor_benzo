@@ -6,7 +6,8 @@ include vendor/benzo/config/art.mk
 
 # Extra packages
 PRODUCT_PACKAGES += \
-    Browser
+    Browser \
+    Terminal
 
 # Props
 PRODUCT_PROPERTY_OVERRIDES += \
