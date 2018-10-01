@@ -29,3 +29,9 @@ BUILD_THUMBPRINT="9/PPR2.180905.006/4945130:user/release-keys"
 PRODUCT_COPY_FILES += \
     vendor/benzo/prebuilt/etc/apns-full-conf.xml:system/etc/apns-conf.xml \
     vendor/benzo/prebuilt/bootanimation.zip:system/media/bootanimation.zip
+
+# Google VR
+PRODUCT_PACKAGES += \
+    libdvr_loader \
+    com.google.vr.platform \
+    com.google.vr.platform.xml
