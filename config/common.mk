@@ -25,7 +25,7 @@ PRODUCT_COPY_FILES += \
     vendor/benzo/prebuilt/etc/sysconfig/benzo-hiddenapi-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/benzo-hiddenapi-whitelist.xml
 
 # Copy all init rc files
-$(foreach f,$(wildcard vendor/benzo/prebuilt/etc/init/*.rc),\
+$(foreach f,$(wildcard vendor/benzo/prebuilt/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
 # Keyboard libs
