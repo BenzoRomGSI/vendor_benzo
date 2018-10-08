@@ -7,7 +7,9 @@ include vendor/benzo/config/art.mk
 # Extra packages
 PRODUCT_PACKAGES += \
     Browser \
-    Terminal
+    OmniJaws \
+    Terminal \
+    WeatherIcons
 
 # Props
 PRODUCT_PROPERTY_OVERRIDES += \
