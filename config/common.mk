@@ -8,6 +8,7 @@ include vendor/benzo/config/art.mk
 PRODUCT_PACKAGES += \
     Browser \
     OmniJaws \
+    SubstratumSignature \
     Terminal \
     WeatherIcons
 
